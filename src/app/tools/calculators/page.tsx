@@ -3,10 +3,12 @@ import AthleteWorkspace from '../../../components/AthleteWorkspace';
 import OneRepMax from '../../../components/calculators/OneRepMax';
 import BodyMetrics from '../../../components/calculators/BodyMetrics';
 import { Activity } from 'lucide-react';
+import ProtectedRoute from '../../../components/ProtectedRoute';
 
 export default function CalculatorsPage() {
   return (
-    <div className="bg-[#050505] min-h-screen pt-24 pb-16">
+    <ProtectedRoute>
+      <div className="bg-[#050505] min-h-screen pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="mb-12 border-b border-zinc-900 pb-8">
@@ -32,7 +34,8 @@ export default function CalculatorsPage() {
           <AthleteWorkspace />
         </div>
 
+        </div>
       </div>
-    </div>
+    </ProtectedRoute>
   );
 }

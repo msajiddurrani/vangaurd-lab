@@ -1,10 +1,12 @@
 import React from 'react';
 import ExerciseLibrary from '../../../components/ExerciseLibrary';
 import { BookOpen } from 'lucide-react';
+import ProtectedRoute from '../../../components/ProtectedRoute';
 
 export default function ExerciseLibraryPage() {
   return (
-    <div className="bg-[#050505] min-h-screen pt-24 pb-16">
+    <ProtectedRoute>
+      <div className="bg-[#050505] min-h-screen pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="mb-12 border-b border-zinc-900 pb-8 flex flex-col md:flex-row gap-6 justify-between items-end">
@@ -30,6 +32,7 @@ export default function ExerciseLibraryPage() {
         <ExerciseLibrary />
 
       </div>
-    </div>
+      </div>
+    </ProtectedRoute>
   );
 }
