@@ -1,5 +1,4 @@
 import React from 'react';
-import MythsSection from '../../components/MythsSection';
 import AboutSection from '../../components/AboutSection';
 import { BookOpen } from 'lucide-react';
 
@@ -23,7 +22,6 @@ export default function AboutPage() {
 
       </div>
 
-      <MythsSection />
       <AboutSection />
     </div>
   );
