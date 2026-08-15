@@ -70,9 +70,9 @@
   --color-text-zinc-100: #1e293b; /* Slate 800 for primary text */
   --color-text-zinc-200: #334155; /* Slate 700 for labels */
   --color-text-zinc-300: #475569; /* Slate 600 for subtext */
-  --color-text-zinc-400: #64748b; /* Slate 500 */
+  --color-text-zinc-400: #475569; /* Slate 600 */
   --color-text-zinc-500: #64748b; /* Slate 500 */
-  --color-text-zinc-600: #94a3b8; /* Slate 400 */
+  --color-text-zinc-600: #334155; /* Slate 700 (made darker for readability) */
   --color-border-zinc-900: #e2e8f0; /* Crisp slate 200 border */
   --color-border-zinc-800: #cbd5e1; /* Slate 300 border */
 }

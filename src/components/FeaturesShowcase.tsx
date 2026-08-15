@@ -6,7 +6,7 @@ import Link from 'next/link';
 const features = [
   {
     title: "Diagnostic Lab",
-    desc: "Calibrate your macros and estimate your 1RM using elite calculation formulas engineered for peak performance.",
+    desc: "Calculate your daily macros and 1-Rep Max with our easy-to-use tools to reach your goals faster.",
     icon: Activity,
     link: "/tools/calculators",
     color: "from-amber-500/20 to-amber-500/0",
@@ -15,7 +15,7 @@ const features = [
   },
   {
     title: "Exercise Library",
-    desc: "A comprehensive kinesiology database categorizing execution mechanics with high-fidelity visual demonstrations.",
+    desc: "A complete library of exercises with clear video demonstrations and step-by-step form guides.",
     icon: BookOpen,
     link: "/academy/exercise-library",
     color: "from-emerald-500/20 to-emerald-500/0",
@@ -24,7 +24,7 @@ const features = [
   },
   {
     title: "Training Portal",
-    desc: "Access structured plans, active workout timers, and advanced educational guides to shatter your plateaus.",
+    desc: "Access structured workout plans and active timers to keep your training on track and build consistency.",
     icon: Dumbbell,
     link: "/academy/portal",
     color: "from-rose-500/20 to-rose-500/0",
@@ -81,7 +81,7 @@ export default function FeaturesShowcase() {
                     {feat.title}
                   </h3>
                   
-                  <p className="text-zinc-600 dark:text-zinc-400 font-mono text-sm leading-relaxed mb-8 flex-grow group-hover:text-zinc-900 dark:group-hover:text-zinc-300 transition-colors">
+                  <p className="text-zinc-600 dark:text-zinc-400 font-sans text-base leading-relaxed mb-8 flex-grow group-hover:text-zinc-900 dark:group-hover:text-zinc-300 transition-colors">
                     {feat.desc}
                   </p>
                   

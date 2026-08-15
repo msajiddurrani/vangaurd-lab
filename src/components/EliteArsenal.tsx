@@ -12,7 +12,7 @@ const ARSENAL_ITEMS = [
     subtitle: 'METRIC CALIBRATION',
     icon: <Zap className="w-6 h-6 text-gold-500" />,
     image: 'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?q=80&w=2000&auto=format&fit=crop',
-    description: 'Calibrate your exact energy intake boundaries and estimate your 1-rep max using our elite calculation formulas.',
+    description: 'Calculate your daily calories and find your 1-rep max using our easy tools.',
     link: '/tools/calculators'
   },
   {
@@ -21,7 +21,7 @@ const ARSENAL_ITEMS = [
     subtitle: 'FORM & BIOMECHANICS',
     icon: <Shield className="w-6 h-6 text-gold-500" />,
     image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2000&auto=format&fit=crop',
-    description: 'Study human movement and perfect your lifting technique with our comprehensive exercise database.',
+    description: 'Learn proper lifting technique with our complete exercise library.',
     link: '/academy/exercise-library'
   },
   {
@@ -30,7 +30,7 @@ const ARSENAL_ITEMS = [
     subtitle: 'TEST YOUR LIMITS',
     icon: <Target className="w-6 h-6 text-gold-500" />,
     image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2000&auto=format&fit=crop',
-    description: 'Take on the 1000 lbs club or the Iron Murph to prove your structural resilience and mental fortitude.',
+    description: 'Take on fun fitness challenges like the 1000 lbs club to test your strength.',
     link: '/academy/portal'
   },
   {
@@ -39,7 +39,7 @@ const ARSENAL_ITEMS = [
     subtitle: 'THE BLUEPRINT',
     icon: <Flame className="w-6 h-6 text-gold-500" />,
     image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2000&auto=format&fit=crop',
-    description: 'Strict, multi-phasic training methodologies utilized by Tier 1 operators and professional athletes.',
+    description: 'Proven training programs used by top athletes to build muscle and burn fat.',
     link: '/academy/portal'
   }
 ];

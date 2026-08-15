@@ -19,20 +19,20 @@ export default function AboutSection() {
               The <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-600 to-zinc-800 dark:from-zinc-400 dark:to-zinc-600">Vanguard</span> <br /> Methodology.
             </h2>
             
-            <div className="space-y-6 text-zinc-600 dark:text-zinc-400 font-mono text-sm md:text-base leading-relaxed mb-10 transition-colors duration-300">
+            <div className="space-y-6 text-zinc-600 dark:text-zinc-400 font-sans text-base md:text-lg leading-relaxed mb-10 transition-colors duration-300">
               <p>
-                Welcome to the ultimate hub for clinical hypertrophy and elite athletic performance. We are not just a supplement store or a generic gym database—we are a comprehensive kinesiology ecosystem designed for those who take their physical evolution seriously.
+                Welcome to your ultimate fitness hub. We are more than just a supplement store—we provide a complete training ecosystem designed to help you reach your goals faster and build your best physique.
               </p>
               <p>
-                Our platform integrates evidence-based workout routines with a massive, biomechanically categorized Exercise Library. Whether you are calibrating your macros in our Diagnostic Lab or pushing to failure in the Training Portal, every tool here is engineered to shatter your plateaus.
+                Our platform integrates proven workout routines with a massive, easy-to-search Exercise Library. Whether you are calculating your daily macros or following a guided plan in the Training Portal, every tool here is built to help you succeed.
               </p>
             </div>
 
             <div className="space-y-6">
               {[
-                { icon: Target, title: "Precision Execution", desc: "Every exercise in our library includes strict anatomical profiling and mechanic breakdowns." },
-                { icon: Zap, title: "Data-Driven Tools", desc: "No guesswork. Use our calculators to dial in your basal metabolic rate and precise rep maxes." },
-                { icon: Shield, title: "Elite Supplements", desc: "Clinically dosed ingredients meant to fuel the grueling regimens found in our training splits." }
+                { icon: Target, title: "Clear Instructions", desc: "Every exercise in our library includes step-by-step form guides and clear demonstrations." },
+                { icon: Zap, title: "Smart Tools", desc: "No guesswork. Use our simple calculators to find your perfect daily calories and max strength." },
+                { icon: Shield, title: "Premium Supplements", desc: "High-quality ingredients perfectly dosed to fuel your hardest workouts and speed up recovery." }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4 items-start">
                   <div className="w-10 h-10 rounded-xl bg-gray-50 dark:bg-[#050505] border border-gray-200 dark:border-zinc-800 flex items-center justify-center shrink-0 transition-colors duration-300">
@@ -40,7 +40,7 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <h4 className="font-display font-bold text-black dark:text-white uppercase tracking-tight text-lg mb-1 transition-colors duration-300">{item.title}</h4>
-                    <p className="text-xs font-mono text-zinc-500 dark:text-zinc-500">{item.desc}</p>
+                    <p className="text-sm font-sans text-zinc-600 dark:text-zinc-400">{item.desc}</p>
                   </div>
                 </div>
               ))}

@@ -8,31 +8,31 @@ const MYTHS = [
   {
     id: 'm1',
     myth: "Lifting heavy weights makes you bulky.",
-    fact: "Building mass requires a massive caloric surplus and years of dedicated programming. Lifting heavy primarily builds neural strength and muscle density.",
+    fact: "Building muscle requires eating more calories and years of consistent training. Lifting heavy weights simply makes you stronger and more toned.",
     category: "PHYSIOLOGY"
   },
   {
     id: 'm2',
     myth: "You must drink protein immediately after your workout.",
-    fact: "The 'anabolic window' is largely exaggerated. Total daily protein intake and consistent nutrient partitioning matter far more than rushing a shake.",
+    fact: "The 'anabolic window' is a myth. Hitting your daily protein goal matters much more than rushing to drink a shake right after your workout.",
     category: "NUTRITION"
   },
   {
     id: 'm3',
     myth: "Doing cardio destroys your muscle gains.",
-    fact: "Intelligent cardiovascular training improves capillary density and nutrient delivery, actually accelerating recovery and long-term muscle growth.",
+    fact: "Smart cardio improves blood flow and actually speeds up recovery, helping you build muscle in the long run.",
     category: "PROGRAMMING"
   },
   {
     id: 'm4',
     myth: "You can target fat loss by doing specific exercises.",
-    fact: "Spot reduction is biologically impossible. Fat loss is systemic and genetically predetermined. You cannot burn belly fat just by doing crunches.",
+    fact: "You can't choose where you lose fat. Fat loss happens all over your body, so doing crunches won't burn belly fat specifically.",
     category: "METABOLISM"
   },
   {
     id: 'm5',
     myth: "More hours in the gym equals faster results.",
-    fact: "Muscles grow during recovery, not during the workout. Excessive volume spikes cortisol and can halt progress entirely.",
+    fact: "Muscles grow while you rest, not while you train. Overtraining can actually slow down your progress and lead to burnout.",
     category: "RECOVERY"
   }
 ];
@@ -66,8 +66,8 @@ export default function MythsSection() {
           >
             SHATTER THE <span className="text-red-500 italic">MYTHS</span>
           </motion.h2>
-          <p className="mt-4 text-zinc-600 dark:text-zinc-500 font-mono text-sm max-w-2xl mx-auto transition-colors duration-300">
-            The fitness industry profits off confusion. Let's decode the lies and expose the scientific truth behind absolute human performance.
+          <p className="mt-4 text-zinc-600 dark:text-zinc-500 font-sans text-base max-w-2xl mx-auto transition-colors duration-300">
+            The fitness industry is full of confusing advice. Let's break down the most common myths and reveal the truth about getting in shape.
           </p>
         </div>
 
