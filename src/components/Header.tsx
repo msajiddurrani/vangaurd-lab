@@ -31,6 +31,7 @@ export default function Header() {
     { label: 'CALCULATORS', href: '/tools/calculators', desc: 'DIET & METRICS' },
     { label: 'EXERCISES', href: '/academy/exercise-library', desc: 'KINESIOLOGY' },
     { label: 'ACADEMY', href: '/academy/portal', desc: 'PLANS & GUIDES' },
+    { label: 'ABOUT', href: '/about', desc: 'OUR MISSION' },
   ];
 
   return (

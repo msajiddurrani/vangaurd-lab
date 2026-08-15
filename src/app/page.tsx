@@ -7,9 +7,6 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import FeaturesShowcase from '../components/FeaturesShowcase';
 import EliteArsenal from '../components/EliteArsenal';
-import ScrollingTicker from '../components/ScrollingTicker';
-import MythsSection from '../components/MythsSection';
-import AboutSection from '../components/AboutSection';
 
 
 
@@ -100,9 +97,6 @@ export default function HomePage() {
 
           <FeaturesShowcase />
           <EliteArsenal />
-          <ScrollingTicker />
-          <MythsSection />
-          <AboutSection />
 
         </div>
       </main>
