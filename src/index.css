@@ -100,8 +100,8 @@ body {
 }
 
 .light .bg-\[\#050505\] {
-  background-color: #f8fafc !important;
-  border-color: #e2e8f0 !important;
+  background-color: #f9fafb !important;
+  border-color: #e5e7eb !important;
 }
 .light .bg-\[\#0b0b0d\] {
   background-color: #ffffff !important;
@@ -122,15 +122,15 @@ body {
 .light .bg-\[\#050505\]\/60,
 .light .bg-\[\#050505\]\/80,
 .light .bg-\[\#050505\]\/95 {
-  background-color: #f8fafc !important;
-  border-color: #e2e8f0 !important;
+  background-color: #f9fafb !important;
+  border-color: #e5e7eb !important;
 }
 .light .bg-\[\#0d0d0d\] {
   background-color: #f1f5f9 !important;
   border-color: #e2e8f0 !important;
 }
 .light .bg-\[\#070707\] {
-  background-color: #f8fafc !important;
+  background-color: #f9fafb !important;
 }
 .light .bg-zinc-950 {
   background-color: #ffffff !important;
@@ -139,8 +139,8 @@ body {
 .light .bg-zinc-950\/40,
 .light .bg-zinc-950\/60,
 .light .bg-zinc-950\/80 {
-  background-color: #f8fafc !important;
-  border-color: #e2e8f0 !important;
+  background-color: #f9fafb !important;
+  border-color: #e5e7eb !important;
 }
 .light .bg-zinc-900\/40,
 .light .bg-zinc-900\/50,
@@ -290,10 +290,6 @@ body {
 }
 
 /* Metric blocks inside calculator */
-.light .bg-\[\#050505\] {
-  background-color: #f7f6f0 !important;
-  border-color: var(--color-border-zinc-900) !important;
-}
 
 /* Fix active tab text color in light theme capsule */
 .light #vanguard-header-wrapper button.text-black span {
