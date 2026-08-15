@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-gold-50: #fef2f2;
+  --color-gold-100: #fee2e2;
+  --color-gold-200: #fecaca;
+  --color-gold-300: #fca5a5;
+  --color-gold-400: #ef4444;
+  --color-gold-500: #dc2626;
+  --color-gold-600: #b91c1c;
+  --color-gold-700: #991b1b;
+  --color-gold-800: #7f1d1d;
+  --color-gold-900: #450a0a;
+  --color-gold-950: #1a0505;
+}
+
+/* Custom scrollbar and aesthetic styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f1f23;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Custom variables for theme overrides */
+:root {
+  --color-bg-05: #050505;
+  --color-bg-05-rgb: 5, 5, 5;
+  --color-bg-0b: #0b0b0d;
+  --color-bg-0b-rgb: 11, 11, 13;
+  --color-bg-0d: #0d0d0d;
+  --color-bg-07: #070707;
+  --color-bg-zinc-950: #09090b;
+  --color-text-white: #ffffff;
+  --color-text-zinc-100: #f4f4f5;
+  --color-text-zinc-200: #e4e4e7;
+  --color-text-zinc-300: #d4d4d8;
+  --color-text-zinc-400: #a1a1aa;
+  --color-text-zinc-500: #71717a;
+  --color-text-zinc-600: #52525b;
+  --color-border-zinc-900: #18181b;
+  --color-border-zinc-800: #27272a;
+}
+
+:root.light {
+  --color-bg-05: #f8fafc; /* Crisp modern Slate 50 canvas */
+  --color-bg-05-rgb: 248, 250, 252;
+  --color-bg-0b: #ffffff; /* Pure white primary card surface */
+  --color-bg-0b-rgb: 255, 255, 255;
+  --color-bg-0d: #f1f5f9; /* Soft slate 100 secondary surface */
+  --color-bg-07: #f8fafc;
+  --color-bg-zinc-950: #ffffff;
+  --color-text-white: #0f172a; /* Slate 900 for headings */
+  --color-text-zinc-100: #1e293b; /* Slate 800 for primary text */
+  --color-text-zinc-200: #334155; /* Slate 700 for labels */
+  --color-text-zinc-300: #475569; /* Slate 600 for subtext */
+  --color-text-zinc-400: #64748b; /* Slate 500 */
+  --color-text-zinc-500: #64748b; /* Slate 500 */
+  --color-text-zinc-600: #94a3b8; /* Slate 400 */
+  --color-border-zinc-900: #e2e8f0; /* Crisp slate 200 border */
+  --color-border-zinc-800: #cbd5e1; /* Slate 300 border */
+}
+
+/* Base resets for classy layout */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-05);
+  color: var(--color-text-zinc-100);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Redefine Tailwind's standard classes under light mode */
+.light::-webkit-scrollbar-track,
+.light ::-webkit-scrollbar-track {
+  background: var(--color-bg-05);
+}
+
+.light::-webkit-scrollbar-thumb,
+.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+.light .bg-\[\#050505\] {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+.light .bg-\[\#0b0b0d\] {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 8px -1px rgba(15, 23, 42, 0.03) !important;
+  border-color: #e2e8f0 !important;
+}
+.light .bg-\[\#0b0b0d\]\/40,
+.light .bg-\[\#0b0b0d\]\/50,
+.light .bg-\[\#0b0b0d\]\/80,
+.light .bg-\[\#0b0b0d\]\/85,
+.light .bg-\[\#0b0b0d\]\/90,
+.light .bg-\[\#0b0b0d\]\/95 {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 8px -1px rgba(15, 23, 42, 0.03) !important;
+  border-color: #e2e8f0 !important;
+}
+.light .bg-\[\#050505\]\/40,
+.light .bg-\[\#050505\]\/60,
+.light .bg-\[\#050505\]\/80,
+.light .bg-\[\#050505\]\/95 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+.light .bg-\[\#0d0d0d\] {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+.light .bg-\[\#070707\] {
+  background-color: #f8fafc !important;
+}
+.light .bg-zinc-950 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+.light .bg-zinc-950\/40,
+.light .bg-zinc-950\/60,
+.light .bg-zinc-950\/80 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+.light .bg-zinc-900\/40,
+.light .bg-zinc-900\/50,
+.light .bg-zinc-900\/60,
+.light .bg-zinc-900\/80 {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.light .border-zinc-900,
+.light .border-zinc-900\/80,
+.light .border-zinc-900\/60,
+.light .border-zinc-900\/40 {
+  border-color: #e2e8f0 !important;
+}
+.light .border-zinc-800,
+.light .border-zinc-800\/80 {
+  border-color: #cbd5e1 !important;
+}
+
+.light .text-white {
+  color: var(--color-text-white) !important;
+}
+.light .text-zinc-100 {
+  color: var(--color-text-zinc-100) !important;
+}
+.light .text-zinc-200 {
+  color: var(--color-text-zinc-200) !important;
+}
+.light .text-zinc-300 {
+  color: var(--color-text-zinc-300) !important;
+}
+.light .text-zinc-400 {
+  color: var(--color-text-zinc-400) !important;
+}
+.light .text-zinc-500 {
+  color: var(--color-text-zinc-500) !important;
+}
+.light .text-zinc-600 {
+  color: var(--color-text-zinc-600) !important;
+}
+
+/* Maintain legibility for solid dark buttons inside Light Mode */
+.light button.bg-zinc-900,
+.light button.bg-zinc-950,
+.light button.bg-black,
+.light .bg-zinc-900.text-white,
+.light .bg-zinc-950.text-white,
+.light .bg-black.text-white {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+.light button.bg-zinc-900 span,
+.light button.bg-zinc-950 span,
+.light button.bg-black span,
+.light button.bg-zinc-900 svg,
+.light button.bg-zinc-950 svg,
+.light button.bg-black svg {
+  color: #ffffff !important;
+}
+
+/* Ensure text remains dark/black on solid gold/amber buttons and badges for legibility */
+.light .bg-gold-500,
+.light .bg-gold-500 *,
+.light .bg-amber-500,
+.light .bg-amber-500 *,
+.light button.bg-gold-500,
+.light .bg-gold-500 span,
+.light .bg-gold-500 h3,
+.light .bg-gradient-to-r.from-gold-500,
+.light .bg-gradient-to-r.from-gold-500 * {
+  color: #000000 !important;
+}
+
+/* Make sure dropdown options are legible */
+.light select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* Inputs, Selects, and Textareas in Light Mode */
+.light input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+.light select,
+.light textarea {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+}
+
+.light input:focus,
+.light select:focus,
+.light textarea:focus {
+  border-color: #d4a359 !important;
+  outline: 2px solid rgba(212, 163, 89, 0.2) !important;
+  box-shadow: 0 0 0 3px rgba(212, 163, 89, 0.15) !important;
+}
+
+/* Premium Light Mode Card Shadow & Border Calibration */
+.light .bg-\[\#0b0b0d\]\/40,
+.light .bg-\[\#050505\]\/60 {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 20px -2px rgba(28, 26, 23, 0.05), 0 2px 8px -1px rgba(28, 26, 23, 0.03) !important;
+  border-color: var(--color-border-zinc-900) !important;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+.animate-float-bg {
+  animation: floatSlow 12s ease-in-out infinite;
+}
+
+@keyframes buttonShimmer {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(200%) rotate(25deg);
+  }
+}
+
+.animate-button-shimmer {
+  animation: buttonShimmer 3s ease-in-out infinite;
+}
+
+.light input,
+.light select,
+.light textarea {
+  background-color: #ffffff !important;
+  border: 1px solid var(--color-border-zinc-800) !important;
+  color: var(--color-text-zinc-100) !important;
+  box-shadow: inset 0 1px 2px rgba(28, 26, 23, 0.02) !important;
+}
+
+.light input:focus,
+.light select:focus,
+.light textarea:focus {
+  border-color: #d4a359 !important;
+  outline: 2px solid rgba(212, 163, 89, 0.1) !important;
+}
+
+/* Metric blocks inside calculator */
+.light .bg-\[\#050505\] {
+  background-color: #f7f6f0 !important;
+  border-color: var(--color-border-zinc-900) !important;
+}
+
+/* Fix active tab text color in light theme capsule */
+.light #vanguard-header-wrapper button.text-black span {
+  color: #000000 !important;
+}
+
+
