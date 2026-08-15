@@ -54,7 +54,7 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}
-                  className="font-display text-5xl sm:text-7xl font-black text-white uppercase tracking-tighter leading-[0.95] text-center"
+                  className="font-display text-5xl sm:text-7xl font-black text-black dark:text-white uppercase tracking-tighter leading-[0.95] text-center transition-colors duration-300"
                 >
                   DIET <span className="text-zinc-500">&amp;</span> <br /> <span className="text-gold-500 italic">WORKOUT LAB</span>
                 </motion.h1>
@@ -63,9 +63,9 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
-                  className="mt-5 text-sm text-zinc-400 leading-relaxed max-w-md mx-auto text-center font-mono"
+                  className="mt-5 text-base text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-md mx-auto text-center font-sans transition-colors duration-300"
                 >
-                  Calibrate your precise energy intake boundaries using our high-fidelity Macro Architect, and select gender-customized high-intensity hypertrophy workout timetables.
+                  Calculate your daily calories and macros with our simple tools, and follow proven workout plans designed to help you build muscle and lose fat.
                 </motion.p>
 
                 <motion.div 
@@ -86,7 +86,7 @@ export default function HomePage() {
 
                   <Link
                     href="/academy/portal"
-                    className="relative group overflow-hidden w-full sm:w-auto px-8 py-4 bg-zinc-950/80 hover:bg-zinc-900 text-zinc-300 hover:text-white border border-zinc-800 hover:border-gold-500/80 rounded-xl font-display font-black text-xs tracking-widest uppercase transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:shadow-[0_0_30px_rgba(212,163,89,0.25)] hover:-translate-y-1 active:translate-y-0 flex items-center justify-center space-x-2.5 cursor-pointer"
+                    className="relative group overflow-hidden w-full sm:w-auto px-8 py-4 bg-zinc-950/80 hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 hover:text-black dark:hover:text-white border border-zinc-800 hover:border-gold-500/80 rounded-xl font-display font-black text-xs tracking-widest uppercase transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:shadow-[0_0_30px_rgba(212,163,89,0.25)] hover:-translate-y-1 active:translate-y-0 flex items-center justify-center space-x-2.5 cursor-pointer"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gold-500/0 via-gold-500/10 to-gold-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                     <span className="w-1.5 h-1.5 rounded-full bg-gold-500/40 group-hover:bg-gold-500 group-hover:scale-125 transition-all duration-300" />
