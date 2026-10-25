@@ -52,25 +52,46 @@ Your task:
       }
     };
 
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(requestBody)
-    });
+    const CANDIDATE_MODELS = [
+      'gemini-flash-latest',
+      'gemini-3.7-flash',
+      'gemini-3.5-flash',
+      'gemini-flash-lite-latest'
+    ];
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error('Gemini API Error:', errorData);
-      return NextResponse.json({ error: 'Failed to generate response from AI.' }, { status: response.status });
+    let aiText: string | null = null;
+    let lastError: any = null;
+
+    for (const model of CANDIDATE_MODELS) {
+      try {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(requestBody)
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+          if (text) {
+            aiText = text;
+            break;
+          }
+        } else {
+          const errorData = await response.json();
+          console.warn(`Diagnostics model ${model} failed with ${response.status}:`, errorData?.error?.message);
+          lastError = errorData;
+        }
+      } catch (err: any) {
+        console.warn(`Diagnostics fetch error on ${model}:`, err.message);
+        lastError = err;
+      }
     }
 
-    const data = await response.json();
-    const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text;
-
     if (!aiText) {
-      return NextResponse.json({ error: 'No response generated.' }, { status: 500 });
+      return NextResponse.json({ 
+        error: lastError?.error?.message || 'High demand on AI services. Please try again shortly.' 
+      }, { status: 503 });
     }
 
     return NextResponse.json({ text: aiText });
