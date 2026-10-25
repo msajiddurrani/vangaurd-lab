@@ -2,10 +2,11 @@ import '../index.css';
 import { AuthProvider } from '../context/AuthContext';
 import { ThemeProvider } from '../context/ThemeContext';
 import Header from '../components/Header';
+import VanguardAIChat from '../components/VanguardAIChat';
 
 export const metadata = {
-  title: 'Vanguard Athletic Lab',
-  description: 'Elite training protocols and macro diagnostics.',
+  title: 'Vanguard Athletic Lab | Elite Training Protocols & Macro Diagnostics',
+  description: 'Elite training protocols, biomechanical kinesiology encyclopedia, and macro diagnostics.',
 };
 
 export default function RootLayout({
@@ -34,6 +35,9 @@ export default function RootLayout({
                   </div>
                 </div>
               </footer>
+              
+              {/* Global Vanguard AI Coach Floating Widget */}
+              <VanguardAIChat />
             </div>
           </ThemeProvider>
         </AuthProvider>

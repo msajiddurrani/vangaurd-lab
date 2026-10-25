@@ -116,7 +116,7 @@ export default function EliteArsenal() {
                     </div>
                     
                     <div className={`overflow-hidden transition-all duration-500 ${isActive ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 hidden lg:block'}`}>
-                      <h3 className="font-display font-black text-2xl text-white uppercase tracking-wider whitespace-nowrap">
+                      <h3 className="font-display font-black text-2xl text-[#ffffff] uppercase tracking-wider whitespace-nowrap">
                         {item.title}
                       </h3>
                       <p className="text-[10px] font-mono text-gold-500 uppercase tracking-widest whitespace-nowrap">
@@ -135,7 +135,7 @@ export default function EliteArsenal() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <p className="text-sm text-zinc-300 font-sans mt-2 mb-6 max-w-md line-clamp-2 md:line-clamp-none">
+                        <p className="text-sm text-[#e4e4e7] font-sans mt-2 mb-6 max-w-md line-clamp-2 md:line-clamp-none">
                           {item.description}
                         </p>
                         
@@ -154,7 +154,7 @@ export default function EliteArsenal() {
                 <div className={`absolute inset-0 p-6 flex flex-col justify-end items-center pointer-events-none transition-opacity duration-300 ${
                   isActive ? 'opacity-0' : 'opacity-0 lg:opacity-100'
                 }`}>
-                  <h3 className="font-display font-black text-xl text-white uppercase tracking-wider -rotate-90 origin-bottom-left absolute bottom-24 left-14 whitespace-nowrap">
+                  <h3 className="font-display font-black text-xl text-[#ffffff] uppercase tracking-wider -rotate-90 origin-bottom-left absolute bottom-24 left-14 whitespace-nowrap">
                     {item.title}
                   </h3>
                 </div>
