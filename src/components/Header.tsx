@@ -94,20 +94,13 @@ export default function Header() {
               </AnimatePresence>
             </motion.button>
 
-            {user ? (
+            {user && (
               <button
                 onClick={logout}
-                className="hidden sm:flex items-center px-3 h-8 rounded-full border border-gray-200 dark:border-zinc-800 bg-gray-50 hover:bg-gray-100 dark:bg-[#050505]/60 dark:hover:bg-zinc-900 text-[10px] font-mono font-bold tracking-widest uppercase text-gold-500 hover:text-gold-600 dark:hover:text-white transition-colors cursor-pointer"
+                className="hidden sm:flex items-center px-3.5 h-8 rounded-full border border-gray-200 dark:border-zinc-800 bg-gray-50 hover:bg-gray-100 dark:bg-[#050505]/60 dark:hover:bg-zinc-900 text-[10px] font-mono font-bold tracking-widest uppercase text-gold-500 hover:text-gold-600 dark:hover:text-white transition-colors cursor-pointer"
               >
                 Logout ({user.name.split(' ')[0]})
               </button>
-            ) : (
-              <Link
-                href="/login"
-                className="hidden sm:flex items-center px-3.5 h-8 rounded-full border border-gold-500/30 bg-gold-500/10 hover:bg-gold-500/20 text-[10px] font-mono font-bold tracking-widest uppercase text-gold-600 dark:text-gold-500 transition-colors cursor-pointer"
-              >
-                Login / Join
-              </Link>
             )}
 
             <button
@@ -144,22 +137,13 @@ export default function Header() {
                 ))}
 
                 {/* Mobile Auth Button */}
-                {user ? (
+                {user && (
                   <button
                     onClick={() => { logout(); setIsMobileMenuOpen(false); }}
                     className="w-full text-left px-4 py-2.5 rounded-xl border border-red-500/20 bg-red-500/10 text-red-400 font-mono text-[10px] font-bold uppercase tracking-wider flex justify-between items-center"
                   >
                     <span>LOGOUT ({user.name})</span>
                   </button>
-                ) : (
-                  <Link
-                    href="/login"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="w-full text-left px-4 py-2.5 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 font-mono text-[10px] font-bold uppercase tracking-wider flex justify-between items-center"
-                  >
-                    <span>LOGIN / REGISTER</span>
-                    <span className="text-[7px] font-mono text-gold-400 uppercase">ACCESS PROTOCOL</span>
-                  </Link>
                 )}
 
                 <div className="p-2.5 bg-[#050505]/40 border border-zinc-900/40 rounded-xl font-mono text-[8px] text-zinc-500 flex justify-between items-center">
